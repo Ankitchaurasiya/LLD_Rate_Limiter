@@ -14,6 +14,12 @@ class RateLimitter {
     generateKey({userId, ip, endPoint}) {
         // considering only UserId
         return `${userId} : ${endPoint}`;
+
+        //if consider only IP
+        // return `${ip} : ${endPoint}`;
+
+        //if consider both UserId and IP
+        // return `${userId} : ${ip} : ${endPoint}`;
     }
 
     isAllowed(request) {
